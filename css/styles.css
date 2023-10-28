@@ -1,0 +1,695 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font-family: var(--text-font);
+  color: var(--article-text-color);
+  font-size: 20px;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* reset finish */
+/* Variables */
+:root {
+  --title-color: #151515;
+  --h2-color: #393939;
+  --background-color: #ffffff;
+  --sec-background-color: #141414;
+  --nav-text-color: rgb(15, 15, 15);
+  --nav-bg-color: rgb(255, 255, 255);
+  --nav-hover-color: white;
+  --topic-title-color: #2e2d25;
+  --title-font: roboto, Times, sans-serif;
+  --text-font: roboto, Times, sans-serif;
+  --second-text-color: #747474;
+  --itch-color: #fa5c5c;
+  --itch-hover-color: rgb(255, 131, 168);
+  --hover-color: rgb(255, 159, 70);
+
+  --article-h1-color: rgb(239, 245, 248);
+  --article-h2-color: rgb(205, 205, 205);
+  --article-text-color: rgb(12, 12, 12);
+  --nav2-bg-color: rgb(112, 112, 112);
+
+  --description-bg-color: #efefef;
+}
+
+img {
+  max-width: 100%;
+}
+a {
+  transition: 0.5s;
+}
+a:hover {
+  color: var(--hover-color);
+  font-size: larger;
+  transition: 0.5s;
+}
+a p:hover{
+  color: var(--hover-color);
+  font-size: larger;
+}
+
+/* Header */
+header {
+  top: 0;
+  /* background-color: var(--nav-bg-color); */
+  font-size: 20px;
+  padding-top: 0.8em;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+}
+header nav {
+  left: 50%;
+}
+nav li {
+  padding: 0.3em 0.5em;
+}
+nav li {
+  display: inline-block;
+}
+header a {
+  text-decoration: none;
+  color: var(--nav-text-color);
+  font-family: var(--title-font);
+  font-weight: bold;
+  transition: 0.5s;
+}
+header.white a {
+  color: white;
+}
+header.white a:hover {
+  color: var(--hover-color);
+}
+header div {
+  display: inline-block;
+}
+.header_left {
+  margin-left: 4em;
+  text-align: left;
+}
+.header_right {
+  margin-right: 4em;
+  text-align: right;
+}
+/* Header Background */
+div.header_background {
+  position: sticky;
+}
+/* Main */
+body {
+  max-width: 100vw;
+}
+main a {
+  text-decoration: none;
+}
+main a:visited {
+  color: var(--article-text-color);
+}
+main {
+  margin: 2em 10%;
+}
+main.main_page section {
+  margin-bottom: 5em;
+  position: relative;
+}
+h1.title {
+  font-family: var(--title-font);
+  font-size: 96px;
+  color: var(--title-color);
+  font-weight: bold;
+  background-color: var(--background-color);
+  white-space: nowrap;
+  width: max-content;
+  padding: 0em 0.4em;
+  z-index: 101;
+  position: relative;
+}
+.title_holder {
+  width: 100%;
+  position: relative;
+  margin-bottom: 5em;
+  margin-top: 10vh;
+}
+.title_underline {
+  position: absolute;
+  top: 2.8em;
+  margin-left: -20%;
+  border-top: #141414 0.7em solid;
+  width: 132.5%;
+  z-index: 100;
+}
+section p {
+  font-family: var(--text-font);
+  font-size: 20px;
+  color: var(--article-text-color);
+  font-weight: 500;
+  line-height: 1.5em;
+}
+main section article:first {
+  margin-top: 5em;
+}
+/* next content */
+section .next_content_box {
+  position: relative;
+  text-align: center;
+}
+section .next_content {
+  text-align: center;
+  font-family: var(--text-font);
+  font-size: 3.5vh;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0.1em;
+  width: 100%;
+}
+section .next_content p {
+  font-size: 3.5vh;
+  font-weight: 500;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+section .next_content p:hover {
+  color: var(--hover-color);
+}
+
+section .next_content div {
+  margin: 0.5em 0;
+}
+section .next_content .arrow_icon {
+  height: 3.5vh;
+  width: auto;
+}
+.main_page section article {
+  margin-bottom: 7.5%;
+}
+
+/* About */
+main section.about article {
+  margin: 2em 5em;
+  padding: 2em 5em;
+}
+section.about {
+  min-height: 80vh;
+}
+section.about p {
+  margin-bottom: 1em;
+}
+section.about article {
+  margin: 10vh 5em;
+}
+
+/* Indie Games Cover */
+section.indie_games img {
+  max-width: 100%;
+  height: auto;
+}
+article.cover_article {
+  display: flex;
+  flex-direction: row;
+}
+section.indie_games article:nth-child(odd) {
+  margin-left: 5vw;
+}
+article.cover_article .cover_left,
+article.cover_article .cover_right {
+  max-width: 38vw;
+}
+img.cover_img {
+  min-width: 38vw;
+  height: auto;
+}
+.cover_right {
+  margin-left: 5vw;
+  padding: 5vh 5vw;
+}
+article.cover_article h2 {
+  font-family: var(--title-font);
+  color: var(--h2-color);
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+article.cover_article p {
+  color: var(--second-text-color);
+  font-size: 16px;
+}
+div.view_more,
+div.download_itch {
+  vertical-align: middle;
+  margin: 1em 0;
+}
+.view_more a,
+div.download_itch a {
+  font-size: 20px;
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+.view_more a:hover,
+div.download_itch a:hover {
+  color: var(--hover-color);
+  font-size: larger;
+}
+.view_more a img,
+div.download_itch a img {
+  margin-right: 0.5em;
+}
+.view_more img,
+div.download_itch img {
+  vertical-align: middle;
+  max-height: 1em;
+}
+div.download_itch {
+  margin-left: 0.2em;
+  color: var(--itch-color);
+}
+
+/* project page */
+main.project_page {
+  margin: 35vh 15vw;
+}
+/* title holder */
+.project_title_holder h1.title {
+  margin-left: 0;
+  display: inline-block;
+  color: white;
+  background: none;
+}
+div.project_title_holder {
+  margin-top: -4vh;
+  /* padding-top: 9.5vh; */
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+}
+.project_title_holder .project_title_underline {
+  border-bottom: 0.6em solid;
+  position: relative;
+  border-color: white;
+  width: 100%;
+  translate: 0 -1.5em;
+}
+div.project_title_underline:first-child {
+  max-width: 20vh;
+}
+div.header_background {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header_background header {
+  position: relative;
+}
+div.scroll_content {
+  height: 9.5vh;
+  width: 100%;
+}
+
+/* back button */
+div.back_button {
+  position: absolute;
+  margin: 0.5em 1em;
+}
+.back_button img {
+  display: inline-block;
+  height: 0.8em;
+  width: auto;
+}
+.back_button p {
+  display: inline-block;
+  font-weight: bolder;
+}
+.back_button a {
+  font-size: 25px;
+  text-decoration: none;
+}
+.back_button a {
+  text-decoration: none;
+}
+.back_button a:visited {
+  text-decoration: none;
+  color: var(--title-color);
+}
+/* individual pages background */
+#florescence_page_background .header_background {
+  background-image: url("../Indie_game_contents/Florescence/Images/Florescence_Screenshot_1.png");
+  background-position: 20%;
+}
+#rolling_racers_page_background .header_background {
+  background-image: url("../Indie_game_contents/Rolling_Racers/Images/Rolling_Racers_screenshot_1.jpg");
+  background-position: 20%;
+}
+#team_quest_page_background .header_background {
+  background-image: url("../Indie_game_contents/Team_Quest/Images/Team_Quest_Screenshot_2.jpg");
+  background-position: 10% 54%;
+}
+#melon_smasher_page_background .header_background {
+  background-image: url("../Indie_game_contents/Melon_Smasher/Images/Melon_Smasher_Screenshot_1.jpg");
+  background-position: 10% 40%;
+}
+/* image slides */
+.slide_button {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  color: var(--background-color);
+  padding: 0.5em;
+  background-color: var(--background-color);
+  border: solid var(--sec-background-color) 0.1em;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  margin: 0.2em;
+}
+.slide_button:hover {
+  background: var(--sec-background-color);
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  text-decoration: none;
+}
+.slide_button.selected {
+  background: var(--sec-background-color);
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  text-decoration: none;
+}
+.slide_buttons {
+  margin-top: 0.3em;
+  margin-bottom: 0.7em;
+  text-align: center;
+}
+/* project content overview */
+.project_content_container {
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: row;
+}
+.project_content_container .right_box {
+  max-width: 40%;
+  margin-left: 2em;
+}
+.project_content_container .left_box {
+  max-width: 60%;
+}
+.project_content_container img,
+.content_container img {
+  max-width: 100%;
+  height: auto;
+}
+p.overview_text {
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+iframe {
+  width: 880px;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+}
+div.description_container {
+  height: max-content;
+  width: auto;
+  background-color: var(--description-bg-color);
+  padding: 1em 1.7em;
+}
+main.project_page section article p {
+  font-size: 18px;
+}
+main.project_page div.description_container p {
+  font-size: 16px;
+  color: var(--article-text-color);
+}
+
+/* project content */
+main.project_page section {
+  border-bottom: #141414 0.1em solid;
+  padding-bottom: 5vh;
+  margin-top: 5vh;
+}
+main.project_page h1 {
+  font-size: 45px;
+  font-weight: 600;
+  margin: 0.8em 0;
+}
+main.project_page h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0.5em 0;
+  color: var(--topic-title-color);
+}
+main.project_page article p {
+  margin-bottom: 0.5em;
+}
+div.content_container {
+  display: flex;
+  flex-direction: row;
+  margin: 3vh 0;
+}
+div.content_container > .left,
+div.content_container > .right {
+  max-width: 50%;
+}
+div.square_img > .left {
+  max-width: 65%;
+}
+div.square_img > .right {
+  max-width: 35%;
+}
+div.content_container .left {
+  margin-right: 5vw;
+}
+div.three > * {
+  max-width: 32%;
+}
+div.three div:nth-child(2) {
+  margin: 0 2%;
+}
+div.four > * {
+  max-width: 23.5%;
+  align-items: center;
+}
+div.four div:nth-child(2) {
+  margin-left: 2%;
+}
+div.four div:nth-child(3) {
+  margin: 0 2%;
+}
+main.project_page section article div.image_with_text p {
+  margin: 0.5em;
+  text-align: center;
+  font-size: 16px;
+}
+.content_container p {
+  margin-bottom: 0.5em;
+}
+.img_container {
+  width: 100%;
+  text-align: center;
+}
+.img_container img {
+  max-width: 60%;
+  height: auto;
+}
+.img_container p {
+  font-size: 16px;
+  color: var(--second-text-color);
+}
+/* text article */
+section.text_article p {
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+section.text_article img {
+  max-width: 30em;
+}
+
+/* practices */
+div.practice_holder {
+  display: flex;
+  flex-direction: row;
+}
+.practice_holder div.practice_holder_vertical {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+div.practice_holder article {
+  background-color: var(--description-bg-color);
+  padding: 1em;
+  margin-right: 2vw;
+  margin-bottom: 2vh;
+}
+.practice_holder article h2 {
+  font-size: 25px;
+  font-weight: 800;
+}
+.practice_holder article p.practice_description {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--second-text-color);
+}
+.practice_holder article p {
+  font-size: 18px;
+  color: var(--article-text-color);
+  margin: .5em 0;
+}
+.practice_holder article iframe, .practice_holder article img {
+  margin: .5em 0;
+  width: 100%;
+}
+.practice_holder article a img{
+  max-height: 1em;
+  width: auto;
+  display: inline;
+  vertical-align: middle;
+}
+.practice_holder article a p{
+  display: inline;
+  vertical-align: middle;
+  font-weight: 700;
+  color: var(--topic-title-color);
+}
+.practice_holder article a p:hover{
+  color: var(--hover-color);
+  font-size: larger;
+}
+.practice_holder article a{
+  vertical-align: middle;
+  margin: 1em 0;
+}
